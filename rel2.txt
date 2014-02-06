@@ -1,0 +1,16 @@
+Na ultima entrega do projecto focamos a nossa atencao na criacao do stack counter, necessario para realizar a alocacao de espaco para variaveis locais,do type validator, da tabela de simbolos e no PFwriter para a producao de PostFix.
+
+Quanto ao Flex, todos os padrões estão a ser reconhecidos. As strings estão a ser reconhecidas como qualquer sequenência de caracteres entre aspas, sendo a sua concatenação, se necessária, feita no yacc. Os inteiros foram divididos em 4 tokens diferentes: zero, decimal, octal, hexadecimal. Esta separação foi feita apenas para distinguir os diferentes casos visto que não existe diferença na implementação das diferentes bases. É usada a função strtod com 10 no 3º argumento para tratar inteiros decimais, com 8 para tratar inteiros em octal e com 0 para tratar os inteiros em hexadecimal uma vez que esta função reconhece o formato 0x e o converte para hexadecimal automaticamente.
+
+No Byacc, salvo algum caso que não nos ocorreu, toda a gramática está a ser reconhecida e está a gerar os nós correspondentes. Foi seguida a gramática descrita no enunciado e não há nada que seja importante salientar.
+
+No Flex e no Byacc foram corrigidos os erros apontados na entrega intermedia e é expectável que toda a gramática e os seus símbolos estejam a ser reconhecidos correctamente.
+
+O Stack Counter tem os seguintes métodos implementados:
+	-Implementação de funções;
+	-Ciclos;
+	-Variáveis;
+
+O Validador de tipos tem todos os métodos que requerem validação implementados tendo em conta os tipos aceites pelos operadores descritos no enunciado.
+
+O PFwriter tem todos os métodos implementados, faz distinção entre operações inteiras e reais, usa o validador de tipos e o stack counter, e faz distinção entre variáveis globais/locais. Não foi implementado correctamente o uso de valores reais e de ponteiros.

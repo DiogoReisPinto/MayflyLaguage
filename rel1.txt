@@ -1,0 +1,12 @@
+Compiladores entrega intermédia - 2012/2013
+
+Para esta entrega intermédia adicionámos os nós que faltavam na entrega 0, nomeadamente, os nós or, and, not, os nós de acesso à memória e o nó variável. Foi também adicionado o nó Bloco.
+Foi removido o nó ForStep e corrigidos alguns nós que não estavam totalmente bem.
+
+Quanto ao Flex, todos os padrões estão a ser reconhecidos. As strings estão a ser reconhecidas como qualquer sequenência de caracteres entre aspas, sendo a sua concatenação, se necessária, feita no yacc. Os inteiros foram divididos em 4 tokens diferentes: zero, decimal, octal, hexadecimal. Esta separação foi feita apenas para distinguir os diferentes casos visto que não existe diferença na implementação das diferentes bases. É usada a função strtod com 10 no 3º argumento para tratar inteiros decimais, com 8 para tratar inteiros em octal e com 0 para tratar os inteiros em hexadecimal uma vez que esta função reconhece o formato 0x e o converte para hexadecimal automaticamente.
+
+No Byacc, salvo algum caso que não nos ocorreu, toda a gramática está a ser reconhecida e está a gerar os nós correspondentes. Foi seguida a gramática descrita no enunciado e não há nada que seja importante salientar.
+
+O XMLwriter está completo, imprimindo o xml correspondente aos nós que foram criados.
+
+O PFwriter contém todos os métodos para processar os nós mas estes ainda não foram implementados.
